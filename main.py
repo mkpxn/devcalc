@@ -38,6 +38,7 @@ class GUI:
         self.remcalc_px = tk.Entry(
             self.remcalc_frame
         )
+        self.remcalc_px.insert(0, 16)
         self.remcalc_px.grid(row=2, column=1)
 
         # Frame 1: and 
@@ -60,7 +61,7 @@ class GUI:
         self.remcalc_rem = tk.Entry(
             self.remcalc_frame,
         )
-        self.remcalc_rem.insert(0, '16')
+        self.remcalc_rem.insert(0, 16)
         self.remcalc_rem.grid(row=2, column=3)
 
         # Frame 1: Button
@@ -68,13 +69,14 @@ class GUI:
             self.remcalc_frame,
             text="berechnen",
             font=('Arial', 14),
+            command=self.remcalc
         )
         self.remcalc_button.grid(row=2, column=4, padx=(20, 0))
 
         # Frame 1: Result
         self.remcalc_result = tk.Label(
             self.remcalc_frame,
-            text="(Result)",
+            text="1.0",
             font=('Arial', 18)
         )
         self.remcalc_result.grid(row=3, column=0, columnspan=5, pady=(20, 0))
@@ -82,6 +84,12 @@ class GUI:
         # Frame 1: Pack
         self.remcalc_frame.pack(padx=20, pady=20)
 
+        # Main Loop
         self.root.mainloop()
 
+    # Functions
+    def remcalc(self):
+        result = int(self.remcalc_px.get()) / int(self.remcalc_rem.get())
+        self.remcalc_result.config(text = result)
+        
 GUI()
