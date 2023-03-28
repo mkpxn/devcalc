@@ -43,8 +43,18 @@ class GUI:
         )
 
         # Frame 1: px input
+
+        # Validation
+        def validate(input):
+            return input.isdigit()
+
+        int_validation = self.root.register(validate)
+
+        # Widget setup
         self.remcalc_px = tk.Entry(
-            self.remcalc_frame
+            self.remcalc_frame,
+            validate = 'all',
+            validatecommand = (int_validation, '%P')
         )
         self.remcalc_px.insert(0, 16)
         self.remcalc_px.grid(
