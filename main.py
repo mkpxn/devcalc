@@ -12,34 +12,34 @@ class GUI:
 
         # Frame 1: Pixel-to-REM calculator
         self.remcalc_frame = tk.Frame(self.root)
-        self.remcalc_frame.columnconfigure(0, weight=1)
-        self.remcalc_frame.columnconfigure(1, weight=1)
-        self.remcalc_frame.columnconfigure(2, weight=1)
-        self.remcalc_frame.columnconfigure(3, weight=1)
-        self.remcalc_frame.columnconfigure(4, weight=1)
+        self.remcalc_frame.columnconfigure(0, weight = 1)
+        self.remcalc_frame.columnconfigure(1, weight = 1)
+        self.remcalc_frame.columnconfigure(2, weight = 1)
+        self.remcalc_frame.columnconfigure(3, weight = 1)
+        self.remcalc_frame.columnconfigure(4, weight = 1)
 
         # Frame 1: Section Label
         self.remcalc_label = tk.Label(
             self.remcalc_frame, 
-            text="Rem Calculator", 
-            font=('Arial', 18),
+            text = "Rem Calculator", 
+            font = ('Arial', 18),
         )
         self.remcalc_label.grid(
-            row=0, 
-            column=0, 
-            columnspan=5, 
-            pady=(0, 20)
+            row = 0, 
+            column = 0, 
+            columnspan = 5, 
+            pady=(0, 20),
         )
 
         # Frame 1: Label for px input
         self.remcalc_px_label = tk.Label(
             self.remcalc_frame,
-            text="Pixel",
-            font=('arial', 14)
+            text = "Pixel",
+            font = ('arial', 14),
         )
         self.remcalc_px_label.grid(
-            row=1, 
-            column=1
+            row = 1, 
+            column = 1,
         )
 
         # Frame 1: px input
@@ -58,27 +58,27 @@ class GUI:
         )
         self.remcalc_px.insert(0, 16)
         self.remcalc_px.grid(
-            row=2, 
-            column=1
+            row = 2, 
+            column = 1,
         )
 
         # Frame 1: and 
         self.remcalc_and = tk.Label(
             self.remcalc_frame,
-            text='=',
-            font=('Arial', 14)
+            text = '=',
+            font = ('Arial', 14),
         )
         self.remcalc_and.grid(
-            row=2, 
-            column=2, 
-            padx=20
+            row = 2, 
+            column = 2, 
+            padx = 20,
         )
 
         # Frame 1: Label for root input
         self.remcalc_root_label = tk.Label(
             self.remcalc_frame,
-            text="Root",
-            font=('arial', 14)
+            text = "Root",
+            font = ('arial', 14),
         )
         self.remcalc_root_label.grid(
             row=1, 
@@ -91,34 +91,34 @@ class GUI:
         )
         self.remcalc_root.insert(0, 16)
         self.remcalc_root.grid(
-            row=2, 
-            column=3
+            row = 2, 
+            column = 3,
         )
 
         # Frame 1: Button
         self.remcalc_button = tk.Button(
             self.remcalc_frame,
-            text="berechnen",
-            font=('Arial', 14),
-            command=self.remcalc
+            text = "berechnen",
+            font = ('Arial', 14),
+            command = self.remcalc,
         )
         self.remcalc_button.grid(
-            row=2, 
-            column=4, 
-            padx=(20, 0)
+            row = 2, 
+            column = 4, 
+            padx = (20, 0),
         )
 
         # Frame 1: Result
         self.remcalc_result = tk.Label(
             self.remcalc_frame,
-            text="1.0",
-            font=('Arial', 18)
+            text = "1.0",
+            font = ('Arial', 18),
         )
         self.remcalc_result.grid(
-            row=3, 
-            column=0, 
-            columnspan=5, 
-            pady=(20, 0)
+            row = 3, 
+            column = 0, 
+            columnspan = 5, 
+            pady = (20, 0),
         )
 
         # Frame 1: Pack
