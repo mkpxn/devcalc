@@ -64,13 +64,13 @@ class GUI:
             padx=20
         )
 
-        # Frame 1: Label for rem input
-        self.remcalc_px_label = tk.Label(
+        # Frame 1: Label for root input
+        self.remcalc_root_label = tk.Label(
             self.remcalc_frame,
             text="Root",
             font=('arial', 14)
         )
-        self.remcalc_px_label.grid(
+        self.remcalc_root_label.grid(
             row=1, 
             column=3
         )
