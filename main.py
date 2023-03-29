@@ -40,7 +40,7 @@ class GUI:
         self.remcalc_px_label = tk.Label(
             self.remcalc_frame,
             text = "Pixel",
-            font = self.font_m,
+            font = self.font_s,
         )
         self.remcalc_px_label.grid(
             row = 1, 
@@ -83,7 +83,7 @@ class GUI:
         self.remcalc_root_label = tk.Label(
             self.remcalc_frame,
             text = "Root",
-            font = self.font_m,
+            font = self.font_s,
         )
         self.remcalc_root_label.grid(
             row = 3, 
