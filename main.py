@@ -2,6 +2,11 @@ import tkinter as tk
 
 class GUI:
 
+    # Fonts
+    font_l = ('Arial', 18)
+    font_m = ('Arial', 14)
+    font_s = ('Arial', 10)
+
     def __init__(self):
 
         # Root / Window
@@ -22,7 +27,7 @@ class GUI:
         self.remcalc_label = tk.Label(
             self.remcalc_frame, 
             text = "Rem Calculator", 
-            font = ('Arial', 18),
+            font = self.font_l,
         )
         self.remcalc_label.grid(
             row = 0, 
@@ -35,7 +40,7 @@ class GUI:
         self.remcalc_px_label = tk.Label(
             self.remcalc_frame,
             text = "Pixel",
-            font = ('arial', 14),
+            font = self.font_m,
         )
         self.remcalc_px_label.grid(
             row = 1, 
@@ -78,7 +83,7 @@ class GUI:
         self.remcalc_root_label = tk.Label(
             self.remcalc_frame,
             text = "Root",
-            font = ('arial', 14),
+            font = self.font_m,
         )
         self.remcalc_root_label.grid(
             row = 3, 
@@ -100,7 +105,7 @@ class GUI:
         self.remcalc_button = tk.Button(
             self.remcalc_frame,
             text = "berechnen",
-            font = ('Arial', 14),
+            font = self.font_m,
             command = self.remcalc,
         )
         self.remcalc_button.grid(
@@ -113,7 +118,7 @@ class GUI:
         self.remcalc_result = tk.Label(
             self.remcalc_frame,
             text = "1.0",
-            font = ('Arial', 18),
+            font = self.font_l,
         )
         self.remcalc_result.grid(
             row = 6, 
