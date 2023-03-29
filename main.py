@@ -83,6 +83,7 @@ class GUI:
         self.remcalc_root_label.grid(
             row = 3, 
             column = 0,
+            pady = (10, 0),
         )
 
         # Frame 1: root input
@@ -118,7 +119,7 @@ class GUI:
             row = 6, 
             column = 0, 
             # columnspan = 5, 
-            pady = (0, 20),
+            pady = 30,
         )
 
         # Frame 1: Pack
