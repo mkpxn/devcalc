@@ -15,6 +15,12 @@ class GUI:
         self.root.geometry('350x400')
         self.root.configure()
 
+        # Validation
+        def validate(input):
+            return input.isdigit()
+
+        int_validation = self.root.register(validate)
+
         # Frame 1: Pixel-to-REM calculator
         self.remcalc_frame = tk.Frame(self.root)
         # self.remcalc_frame.columnconfigure(0, weight = 1)
@@ -48,18 +54,10 @@ class GUI:
         )
 
         # Frame 1: px input
-
-        # Validation
-        def validate(input):
-            return input.isdigit()
-
-        int_validation = self.root.register(validate)
-
-        # Widget setup
         self.remcalc_px = tk.Entry(
             self.remcalc_frame,
             validate = 'all',
-            validatecommand = (int_validation, '%P')
+            validatecommand = (int_validation, '%P'),
         )
         self.remcalc_px.insert(0, 16)
         self.remcalc_px.grid(
@@ -94,6 +92,8 @@ class GUI:
         # Frame 1: root input
         self.remcalc_root = tk.Entry(
             self.remcalc_frame,
+            validate = 'all',
+            validatecommand = (int_validation, '%P')
         )
         self.remcalc_root.insert(0, 16)
         self.remcalc_root.grid(
