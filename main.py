@@ -7,7 +7,7 @@ class GUI:
         # Root / Window
         self.root = tk.Tk()
         self.root.title('Dev Calculator')
-        self.root.geometry('350x500')
+        self.root.geometry('350x400')
         self.root.configure()
 
         # Frame 1: Pixel-to-REM calculator
