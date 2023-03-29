@@ -60,6 +60,7 @@ class GUI:
             validatecommand = (int_validation, '%P'),
         )
         self.remcalc_px.insert(0, 16)
+        self.remcalc_px.bind("<KeyPress>", self.shortcut)
         self.remcalc_px.grid(
             row = 2, 
             column = 0,
@@ -140,5 +141,9 @@ class GUI:
 
         result = px / root
         self.remcalc_result.config(text = result)
+    
+    def shortcut(self, event):
+        if event.keysym == 'Return':
+            self.remcalc()
         
 GUI()
