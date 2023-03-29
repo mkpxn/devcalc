@@ -17,7 +17,10 @@ class GUI:
 
         # Validation
         def validate(input):
-            return input.isdigit()
+            if input.isdigit() or input == '':
+                return True
+            else:
+                return False
 
         int_validation = self.root.register(validate)
 
