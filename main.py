@@ -68,6 +68,7 @@ class GUI:
             row = 2, 
             column = 0,
         )
+        self.remcalc_px.focus()
 
         # Frame 1: and 
         # self.remcalc_and = tk.Label(
