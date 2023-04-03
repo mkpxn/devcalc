@@ -8,8 +8,8 @@ class GUI:
     font_s = ('Arial', 10)
 
     # Colors
-    color_bg        = '#010409'
-    color_primary   = '#0D1117'
+    color_bg        = '#26272A'     #010409
+    color_primary   = '#1B2125'     #0D1117
     color_accent    = '#4CCEAC'
     color_grey_f    = '#7A8490'     # Grey / Font
     color_grey_b    = '#21262D'     # Grey / Button
